@@ -5,7 +5,6 @@ import lombok.NonNull;
 import org.bukkit.Material;
 import org.bukkit.plugin.IllegalPluginAccessException;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -102,13 +101,6 @@ public class CustomEnchantProperties {
 
     public static class CustomEnchantPropertiesBuilder {
 
-        private final Map<String, Object> customProperties = new HashMap<>();
-        private FileConfig file;
-        private boolean glow;
-        private String displayName;
-        private List<String> description;
-        private Material material;
-        private int data, level;
 
         public CustomEnchantPropertiesBuilder() {
             throw new IllegalPluginAccessException("PandaGKit has been not found!");
@@ -155,7 +147,7 @@ public class CustomEnchantProperties {
 
 
         public CustomEnchantProperties build() {
-            return new CustomEnchantProperties(customProperties, file, glow, material, displayName, description, data, level);
+            throw new IllegalPluginAccessException("PandaGKit has been not found!");
         }
     }
 }
